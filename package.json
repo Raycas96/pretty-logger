@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest --coverage",
-    "precommit": "test && pump:minor",
-    "prepublish": "tsc",
+    "prepublishOnly": "tsc",
     "pump:alpha": "npm version premajor --preid=alpha --no-git-tag-version && exit 0",
     "prefix:beta": "npm version prerelease --preid=beta --no-git-tag-version && exit 0",
     "pump:minor": "npm version prerelease --no-git-tag-version && exit 0",
