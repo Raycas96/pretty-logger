@@ -1,10 +1,15 @@
 {
-  "name": "pretty-logger",
-  "version": "1.0.0",
+  "name": "@raycas/pretty-logger",
+  "version": "1.0.1-alpha.0",
   "description": "beautiful logger for web app and node.js env",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "tsc",
+    "pump:alpha": "version premajor --preid alpha",
+    "prefix:beta": "version prerelease --preid beta",
+    "pump:minor": "npm version prerelease",
+    "prefix:alpha": "version prerelease --preid alpha"
   },
   "author": "Raycas",
   "license": "ISC",
@@ -18,5 +23,12 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ]
 }
