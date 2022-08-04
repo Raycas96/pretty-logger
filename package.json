@@ -1,6 +1,6 @@
 {
   "name": "@raycas/pretty-logger",
-  "version": "1.0.1-alpha.5",
+  "version": "1.0.1-alpha.12",
   "description": "beautiful logger for web app and node.js env",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

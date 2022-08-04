@@ -1,25 +1,25 @@
-import Logger from '../logger';
+import { logger } from './../utils';
 
-test('Logger.warn', () => {
-  const logSpy = jest.spyOn(Logger, 'warn');
-  Logger.warn('hello');
+test('logger.warn', () => {
+  const logSpy = jest.spyOn(logger, 'warn');
+  logger.warn('hello');
   expect(logSpy).toHaveBeenCalledWith('hello');
-  Logger.warn('hello', 'world');
+  logger.warn('hello', 'world');
   expect(logSpy).toHaveBeenCalledWith('hello', 'world');
 });
 
-test('Logger.error', () => {
-  const logSpy = jest.spyOn(Logger, 'error');
-  Logger.error('hello');
+test('logger.error', () => {
+  const logSpy = jest.spyOn(logger, 'error');
+  logger.error('hello');
   expect(logSpy).toHaveBeenCalledWith('hello');
-  Logger.error('hello', 'world');
+  logger.error('hello', 'world');
   expect(logSpy).toHaveBeenCalledWith('hello', 'world');
 });
 
-test('Logger.info', () => {
-  const logSpy = jest.spyOn(Logger, 'info');
-  Logger.info('hello');
+test('logger.info', () => {
+  const logSpy = jest.spyOn(logger, 'info');
+  logger.info('hello');
   expect(logSpy).toHaveBeenCalledWith('hello');
-  Logger.info('hello', 'world');
+  logger.info('hello', 'world');
   expect(logSpy).toHaveBeenCalledWith('hello', 'world');
 });
