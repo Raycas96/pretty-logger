@@ -1,3 +1,1 @@
-import Logger from './logger/logger';
-
-export * from './logger/logger';
+export * as Logger from './logger/logger';
