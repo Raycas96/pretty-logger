@@ -4,16 +4,18 @@
   "description": "beautiful logger for web app and node.js env",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
+    "precommit": "test && pump:minor",
     "prepublish": "tsc",
-    "pump:alpha": "version premajor --preid alpha",
-    "prefix:beta": "version prerelease --preid beta",
-    "pump:minor": "npm version prerelease",
-    "prefix:alpha": "version prerelease --preid alpha"
+    "pump:alpha": "version premajor --preid=alpha",
+    "prefix:beta": "version prerelease --preid=beta",
+    "pump:minor": "version prerelease",
+    "prefix:alpha": "version prerelease --preid=alpha --force"
   },
   "author": "Raycas",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^28.1.6",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "eslint": "^8.21.0",
@@ -21,7 +23,9 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.3",
     "prettier": "^2.7.1",
+    "ts-jest": "^28.0.7",
     "typescript": "^4.7.4"
   },
   "publishConfig": {
