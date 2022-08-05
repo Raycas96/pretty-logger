@@ -6,7 +6,6 @@ const loggerForNode = (
   bracketMessage: BracketMessage,
   ...infos: any
 ): void => {
-  console.log(infos, ...infos, infos.map(formatter));
   console.log(
     color,
     `[${String.fromCodePoint(emoji)}${bracketMessage}]:`,
